@@ -1,4 +1,5 @@
-     name: 获取指定用户信息测试用例
+config:
+    name: 获取指定用户信息测试用例
     base_url: ${ENV(base_url)}
 
 testcases:
