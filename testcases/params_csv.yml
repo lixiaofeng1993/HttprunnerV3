@@ -1,0 +1,18 @@
+config:
+    name: 获取指定用户信息测试用例
+    base_url: ${ENV(base_url)}
+    parameters:
+        user: ${P(user.csv)}
+    export:
+        - token
+
+teststeps:
+-
+    name: 登录接口 测试用例
+    api: api/login.yml
+-
+    name: 获取指定用户信息 测试用例
+    api: api/get_user.yml
+-
+    name: 退出登录 测试用例
+    api: api/logout.yml

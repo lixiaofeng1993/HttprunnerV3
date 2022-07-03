@@ -1,0 +1,15 @@
+config:
+  name: 获取指定用户信息接口
+  base_url: ${ENV(base_url)}
+  export:
+    - token
+
+teststeps:
+  - name: 获取指定用户信息接口 测试用例
+    request:
+      url: /users/$user
+      method: GET
+      headers:
+        Authorization: Bearer $token
+    validate:
+      - eq: [status_code, 200]

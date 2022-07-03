@@ -1,0 +1,19 @@
+config:
+  name: 登录接口
+  base_url: ${ENV(base_url)}
+  export:
+    - token
+
+teststeps:
+  - name: 登录接口 测试用例
+    request:
+      url: /users/login
+      method: POST
+      data:
+        username: lixiaofeng
+        password: 123456
+    extract:
+      token: content.result.access_token
+    validate:
+      - eq: [status_code, 200]
+      - eq: [content.result.name, lixiaofeng]

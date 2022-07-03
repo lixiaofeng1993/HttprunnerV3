@@ -1,0 +1,11 @@
+config:
+    name: 获取指定用户信息测试用例
+    base_url: ${ENV(base_url)}
+
+testcases:
+-
+    name: 登录接口 测试用例
+    testcase: testcases/params_csv.yml
+-
+    name: 登录接口 测试用例
+    testcase: testcases/params_csv1.yml
